@@ -20,6 +20,7 @@
    ```bash
 git clone https://github.com/DaryaKhapalova/Autotests-Playwright-.git
 cd Autotests-Playwright(название-репозитория)
+
 4. Установите зависимости:
 pip install -r requirements.txt
 5. Установите Playwright:
