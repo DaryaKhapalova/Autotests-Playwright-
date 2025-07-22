@@ -5,6 +5,7 @@
 ## Структура проекта
 Репозиторий содержит автотесты, написанные с использованием [Playwright](https://playwright.dev/python/) на языке Python. Проект предназначен для автоматизации тестирования веб-приложений.
 Также для написания кода необходима установка IDE-системы. Например, [Visual Studio Code](https://code.visualstudio.com/Download)
+
  tests/ # Тестовые сценарии
  pages/ # Page Object модели
  config/ # Конфигурационные файлы
@@ -23,9 +24,11 @@ cd Autotests-Playwright(название-репозитория)
 
 4. Установите зависимости:
 pip install -r requirements.txt
-5. Установите Playwright:
+
+6. Установите Playwright:
 pip install playwright
-6. Установите браузеры для Playwright:
+
+7. Установите браузеры для Playwright:
 playwright install
 #### Запуск тестов
 Все тесты:
