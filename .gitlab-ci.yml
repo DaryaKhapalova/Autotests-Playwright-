@@ -1,0 +1,26 @@
+stages:
+  - test
+
+preprod:
+  stage: test
+  image: registry.example.ru/devops/devopscom/base-images:playwright-python-v1-51-0-1
+  tags:
+    - devops-docker
+  variables:
+    BASE_URL: "https://preprod.k8s.services.example.local/"
+    DEFAULT_CUSTOMER_NO: ${DEFAULT_CUSTOMER_NO}
+    DEFAULT_LOGIN: ${DEFAULT_LOGIN}
+    DEFAULT_PASSWORD: ${DEFAULT_PASSWORD}
+  before_script:
+    - pip install -r requirements.txt
+    - mkdir -p downloads
+    - chmod 777 downloads
+  script:
+    - pytest tests --junitxml=report.xml
+  artifacts:
+    paths:
+      - downloads
+    reports:
+      junit: report.xml
+    expire_in: 1 hour
+  when: manual

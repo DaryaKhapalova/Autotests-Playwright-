@@ -1,0 +1,5 @@
+pytest
+playwright
+websockets
+pandas
+requests
